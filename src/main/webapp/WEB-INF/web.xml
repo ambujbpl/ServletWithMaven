@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<display-name>LoginFilter</display-name>
+  	<description></description>
+  	<filter-class>com.ideata.filter.LoginFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>LoginFilterPass</filter-name>
+  	<display-name>LoginFilterPass</display-name>
+  	<description></description>
+  	<filter-class>com.ideata.filter.LoginFilterPass</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/login</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>LoginFilterPass</filter-name>
+  	<url-pattern>/login</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<display-name>LoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.ideata.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutController</servlet-name>
+  	<display-name>LogoutController</display-name>
+  	<description></description>
+  	<servlet-class>com.ideata.controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutController</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+</web-app>
